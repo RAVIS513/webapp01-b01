@@ -1,0 +1,95 @@
+2016-09-13 15:46:49,943	[INFO ]	[GetNews]	GetNews Start [Tue Sep 13 15:46:49 JST 2016]
+2016-09-13 15:46:50,476	[INFO ]	[DbSessionUtil]	DB Session Open :  / org.apache.ibatis.session.defaults.DefaultSqlSession@c9f39
+2016-09-13 15:46:50,509	[INFO ]	[GetNews]	GetNewsUrl : http://news.yahoo.co.jp/theme/0fd19c1978a6f8be7699/
+2016-09-13 15:46:50,509	[INFO ]	[GetNews]	GetNewsQuery : #feed > ul > li.feedArticle > div.mc > dl > dt > a
+2016-09-13 15:46:52,639	[INFO ]	[GetNews]	Get News Numbers : 20
+2016-09-13 15:46:52,665	[INFO ]	[NewsDao]	selectAll Run
+2016-09-13 15:46:52,960	[DEBUG]	[selectAll]	==>  Preparing: SELECT * FROM NEWS_TABLE 
+2016-09-13 15:46:53,065	[DEBUG]	[selectAll]	==> Parameters: 
+2016-09-13 15:46:53,096	[DEBUG]	[selectAll]	<==      Total: 0
+2016-09-13 15:46:53,096	[INFO ]	[NewsDao]	deleteAll Run
+2016-09-13 15:46:53,096	[DEBUG]	[deleteAll]	==>  Preparing: DELETE FROM NEWS_TABLE 
+2016-09-13 15:46:53,096	[DEBUG]	[deleteAll]	==> Parameters: 
+2016-09-13 15:46:53,099	[DEBUG]	[deleteAll]	<==    Updates: 0
+2016-09-13 15:46:53,099	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,126	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( '「CDTV」にスカパラ feat. 横山健、Flower', 'http://headlines.yahoo.co.jp/hl?a=20160908-00000081-natalien-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,128	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,225	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,226	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,226	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( '横山健が“スカパラ論”熱弁！コラボトークショーで「僕は10人目のメンバー」', 'http://headlines.yahoo.co.jp/hl?a=20160908-00000076-natalien-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,227	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,229	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,230	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,230	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( '明日放送「Love music」にクリープハイプ、クリケイ、スカパラ feat.横山健', 'http://headlines.yahoo.co.jp/hl?a=20160908-00000032-natalien-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,231	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,233	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,234	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,234	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( '「スカパラ」川上が選んだ、珠玉の「ブラジルミュージック」3曲', 'http://headlines.yahoo.co.jp/hl?a=20160906-00010002-tokyofm-ent', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,234	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,237	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,237	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,238	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( '手書きのラブレターをもらった夜に聴きたい曲', 'http://netallica.yahoo.co.jp/news/20160901-48447359-okmusic', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,238	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,241	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,241	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,242	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( 'Silent Siren、楽器の細部まで再現したbrokkerフィギュア発売', 'http://headlines.yahoo.co.jp/hl?a=20160823-00000035-natalien-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,248	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,251	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,251	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,252	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( 'イエモン、横山健、アジカン、WANIMAらが熱演「ROCK IN JAPAN」後半戦', 'http://headlines.yahoo.co.jp/hl?a=20160819-00000076-natalien-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,252	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,255	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,255	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,256	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( '快進撃のWANIMA「感謝を伝えたい」', 'http://headlines.yahoo.co.jp/hl?a=20160811-00013902-lmaga-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,256	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,259	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,260	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,260	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( 'スカパラ×横山健、男の哀愁漂うコラボ曲MV', 'http://headlines.yahoo.co.jp/hl?a=20160803-00000006-natalien-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,261	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,263	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,264	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,264	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( 'locofrank主催「FOUR SEASONS」に難波章浩、Xmas Eileenら追加', 'http://headlines.yahoo.co.jp/hl?a=20160723-00000031-natalien-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,265	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,267	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,267	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,267	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( 'スカパラ×Ken Yokoyama、早くも再タッグ！ 横山健、大人過ぎるラブソングを歌う－－', 'http://headlines.yahoo.co.jp/hl?a=20160714-00145699-rorock-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,267	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,269	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,270	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,273	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( '和田アキ子、ハイスタの名盤同封アンケートはがきに記入　Ken Yokoyamaが交友録を語る', 'http://headlines.yahoo.co.jp/hl?a=20160713-00010004-musicv-ent', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,274	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,275	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,276	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,278	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( 'スカパラ、横山健との共通点を語る「道なき道を走ってきた」', 'http://headlines.yahoo.co.jp/hl?a=20160708-00010000-musicv-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,278	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,280	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,280	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,280	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( '佐藤隆太、横山健の魅力を熱弁「いつ見てもオーラがある人」', 'http://zasshi.news.yahoo.co.jp/article?a=20160702-00010008-realsound-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,281	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,282	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,282	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,283	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( 'スカパラ×ハイスタ横山健　男気ぶつかり合うコラボが熱い！！', 'http://netallica.yahoo.co.jp/news/20160701-29864752-anannews', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,283	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,285	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,285	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,285	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( 'スカパラ×横山健、ヴィレヴァン渋谷で“放送コードギリギリ”の爆笑トークショー', 'http://headlines.yahoo.co.jp/hl?a=20160625-00000045-natalien-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,285	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,286	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,287	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,287	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( '横山健、大貫亜美とネグリジェ姿　“kenkoちゃん”と評判。', 'http://netallica.yahoo.co.jp/news/20160625-59219038-techin', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,287	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,289	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,289	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,289	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( 'マンウィズ、ブロックトイになる', 'http://headlines.yahoo.co.jp/hl?a=20160624-00000273-bark-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,289	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,291	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,291	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,291	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( 'MAN WITH A MISSION、細部までこだわったbrokkerフィギュア登場', 'http://headlines.yahoo.co.jp/hl?a=20160624-00000048-natalien-musi', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,291	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,291	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,291	[INFO ]	[NewsDao]	insert Run
+2016-09-13 15:46:53,292	[DEBUG]	[insert]	==>  Preparing: INSERT INTO NEWS_TABLE ( TITLE, URL, NEW_FLAG, CREATE_TIME ) VALUES ( '＜動画＞横山健＆スカパラが新宿ゲリラライブ！綾野剛もノリノリ', 'http://headlines.yahoo.co.jp/hl?a=20160624-00000001-mantanv-ent', '1', '2016-09-13 15:46:53.096' ) 
+2016-09-13 15:46:53,292	[DEBUG]	[insert]	==> Parameters: 
+2016-09-13 15:46:53,294	[DEBUG]	[insert]	<==    Updates: 1
+2016-09-13 15:46:53,295	[INFO ]	[DbSessionUtil]	DB Commit : org.apache.ibatis.session.defaults.DefaultSqlSession@c9f39
+2016-09-13 15:46:53,296	[INFO ]	[DbSessionUtil]	DB Close : org.apache.ibatis.session.defaults.DefaultSqlSession@c9f39

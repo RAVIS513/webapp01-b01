@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jp.ne.ravisite.mapper.NewsMapper">
+
+	<resultMap type="jp.ne.ravisite.dto.NewsDto" id="NewsResultMap">
+		<result column="SEQ_NO" property="seqNo" />
+		<result column="TITLE" property="title" />
+		<result column="URL" property="url" />
+		<result column="NEW_FLAG" property="newFlag" />
+		<result column="CREATE_TIME" property="createTime" />
+		<result column="UPDATE_TIME" property="updateTime" />
+	</resultMap>
+
+	<select id="selectAll" resultMap="NewsResultMap">
+		SELECT * FROM NEWS_TABLE
+	</select>
+
+	<insert id="insert" parameterType="jp.ne.ravisite.dto.NewsDto">
+		INSERT INTO NEWS_TABLE (
+			TITLE,
+			URL,
+			NEW_FLAG,
+			CREATE_TIME
+		) VALUES (
+			'${title}',
+			'${url}',
+			'${newFlag}',
+			'${createTime}'
+		)
+	</insert>
+
+	<delete id="deleteAll">
+		DELETE FROM NEWS_TABLE
+	</delete>
+
+</mapper>

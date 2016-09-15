@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ====================================== -->
+<!-- Project Setting                        -->
+<!-- ====================================== -->
+<project name="ravisite" default="copy" basedir="../">
+
+	<echo message="${basedir}"/>
+
+	<!-- ====================================== -->
+	<!-- Build environment properties           -->
+	<!-- ====================================== -->
+	<property file="${basedir}/ant/build.properties"/>
+	<property name="lib" value="${basedir}/lib"/>
+	<property name="target" value="${basedir}/targetLocal"/>
+	<property name="classes" value="${target}/classes"/>
+	<property name="deploy" value="${target}/deployLocal"/>
+	<property name="deploy.jar" value="${deploy}/classes"/>
+	<property name="deploy.properties" value="${deploy}/properties"/>
+	<property name="src.java" value="${basedir}/src/main/java"/>
+	<property name="src.resource" value="${basedir}/src/main/resource"/>
+	<property name="resources" value="${basedir}/resources"/>
+
+	<!-- ====================================== -->
+	<!-- ClassPath Setting For Library          -->
+	<!-- ====================================== -->
+	<path id="build.classpath">
+		<fileset dir="${lib}" includes="*.jar" />
+	</path>
+
+	<!-- ====================================== -->
+	<!-- Initialization                         -->
+	<!-- ====================================== -->
+	<target name="clean" description="Clean the Output Directory">
+		<delete dir="${target}"/>
+		<mkdir dir="${classes}"/>
+		<mkdir dir="${deploy.jar}"/>
+		<mkdir dir="${deploy.properties}"/>
+	</target>
+
+	<!-- ====================================== -->
+	<!-- Compile                                -->
+	<!-- ====================================== -->
+	<target name="compile" description="Compile" depends="clean">
+		<javac
+			classpathref="build.classpath"
+			srcdir="${src.java}"
+			destdir="${classes}"
+			encoding="UTF-8"
+			source="1.6"
+			target="1.6"
+			fork="true"
+			memorymaximumsize="256m"
+			includeAntRuntime="false"
+			debug="true"
+		/>
+		<copy todir="${classes}">
+			<fileset dir="${src.resource}">
+				<exclude name="*.properties"/>
+				<exclude name="release/**/*"/>
+				<exclude name="release"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- ====================================== -->
+	<!-- Build                                  -->
+	<!-- ====================================== -->
+	<target name="build" description="Create JAR File" depends="compile">
+		<jar
+			destfile="${deploy.jar}/${jar.name}.jar"
+			basedir="${classes}"
+			compress="true"
+		/>
+	</target>
+
+	<!-- ====================================== -->
+	<!-- Resources Copy                         -->
+	<!-- ====================================== -->
+	<target name="copy" description="Copy Library And Proper File" depends="build">
+		<copy file="${src.resource}/batch.properties" overwrite="true" todir="${deploy.properties}"/>
+		<copy file="${src.resource}/db.properties" overwrite="true" todir="${deploy.properties}"/>
+		<copy file="${src.resource}/log4j.properties" overwrite="true" todir="${deploy.properties}"/>
+		<copy file="${lib}/commons-logging-1.2.jar" overwrite="true" todir="${deploy.jar}"/>
+		<copy file="${lib}/jsoup-1.9.2.jar" overwrite="true" todir="${deploy.jar}"/>
+		<copy file="${lib}/log4j-1.2.17.jar" overwrite="true" todir="${deploy.jar}"/>
+		<copy file="${lib}/mybatis-3.4.1.jar" overwrite="true" todir="${deploy.jar}"/>
+		<copy file="${lib}/ojdbc6.jar" overwrite="true" todir="${deploy.jar}"/>
+		<copy file="${resources}/BatchRunner.bat" overwrite="true" todir="${deploy}"/>
+	</target>
+
+</project>
