@@ -94,28 +94,44 @@ public class GetNews extends BatchAbstract{
 	 * ニューステーブルインサートデータ作成
 	 * @param onList
 	 * @param dbList
-	 * @return
+	 * @return ニュース記事に更新が無い場合、空のリストを返す
 	 */
 	private List<NewsDto> createInsertData(List<GetNewsDto> onList, List<NewsDto> dbList) {
 		List<NewsDto> list = new ArrayList<NewsDto>();
-		Boolean newFlag = true;
-		for (GetNewsDto on : onList) {
-			newFlag = true;
-			// 新規ニュースかチェックする
+		if (onList != null && !onList.isEmpty()) {
+			// 新規ニュース有無確認
+			int cnt = 0;
 			if (dbList != null && !dbList.isEmpty()) {
-				for (NewsDto db : dbList) {
-					if (on.getUrl().equals(db.getUrl())) {
-						newFlag = false;
+				for (GetNewsDto on : onList) {
+					for (NewsDto db : dbList) {
+						if (on.getUrl().equals(db.getUrl())) {
+							cnt++;
+						}
 					}
 				}
 			}
-			// インサートデータ作成
-			NewsDto dto = new NewsDto();
-			dto.setTitle(on.getTitle());
-			dto.setUrl(on.getUrl());
-			dto.setNewFlag(newFlag == true ? "1" : "0");
-			dto.setCreateTime(new Timestamp(System.currentTimeMillis()));
-			list.add(dto);
+			// 新規ニュース用インサートデータ作成
+			if (onList.size() != cnt) {
+				Boolean newFlag = true;
+				for (GetNewsDto on : onList) {
+					newFlag = true;
+					// 新規ニュースかチェックする
+					if (dbList != null && !dbList.isEmpty()) {
+						for (NewsDto db : dbList) {
+							if (on.getUrl().equals(db.getUrl())) {
+								newFlag = false;
+							}
+						}
+					}
+					// インサートデータ作成
+					NewsDto dto = new NewsDto();
+					dto.setTitle(on.getTitle());
+					dto.setUrl(on.getUrl());
+					dto.setNewFlag(newFlag == true ? "1" : "0");
+					dto.setCreateTime(new Timestamp(System.currentTimeMillis()));
+					list.add(dto);
+				}
+			}
 		}
 		return list;
 	}
