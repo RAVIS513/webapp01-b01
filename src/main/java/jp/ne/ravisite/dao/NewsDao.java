@@ -20,17 +20,17 @@ public class NewsDao {
 	}
 
 	public List<NewsDto> selectAll() {
-		logger.info("selectAll Run");
+		logger.debug("selectAll Run");
 		return mapper.selectAll();
 	}
 
 	public int insert(NewsDto dto) {
-		logger.info("insert Run");
+		logger.debug("insert Run");
 		return mapper.insert(dto);
 	}
 
 	public int deleteAll() {
-		logger.info("deleteAll Run");
+		logger.debug("deleteAll Run");
 		return mapper.deleteAll();
 	}
 

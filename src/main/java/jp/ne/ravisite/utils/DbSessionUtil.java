@@ -26,7 +26,7 @@ public class DbSessionUtil {
 		try {
 			SqlSessionFactory ssf = new SqlSessionFactoryBuilder().build(this.getClass().getResourceAsStream("mybatis-config.xml"));
 			session = ssf.openSession(false);
-			logger.info("DB Session Open : " + " / " + session);
+			logger.debug("DB Session Open : " + " / " + session);
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (session != null) {
@@ -44,7 +44,7 @@ public class DbSessionUtil {
 	public void commit(SqlSession session) {
 		try {
 			session.commit();
-			logger.info("DB Commit : " + session);
+			logger.debug("DB Commit : " + session);
 		} catch (Exception e) {
 			e.printStackTrace();
 			session.rollback();
@@ -60,7 +60,7 @@ public class DbSessionUtil {
 	public void rollback(SqlSession session) {
 		try {
 			session.rollback();
-			logger.info("DB Rollback : " + session);
+			logger.debug("DB Rollback : " + session);
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new BatchException("DB Rollback Error", e);
@@ -76,14 +76,14 @@ public class DbSessionUtil {
 	public void close(SqlSession session) {
 		try {
 			session.commit();
-			logger.info("DB Commit : " + session);
+			logger.debug("DB Commit : " + session);
 		} catch (Exception e) {
 			e.printStackTrace();
 			session.rollback();
 			throw new BatchException("DB Close Error", e);
 		} finally {
 			session.close();
-			logger.info("DB Close : " + session);
+			logger.debug("DB Close : " + session);
 		}
 	}
 

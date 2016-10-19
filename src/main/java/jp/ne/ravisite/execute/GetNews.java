@@ -68,8 +68,8 @@ public class GetNews extends BatchAbstract{
 	private List<GetNewsDto> getNewsFromOnline(ResourceBundle rb) {
 		List<GetNewsDto> list = new ArrayList<GetNewsDto>();
 		try {
-			logger.info("GetNewsUrl : " + rb.getString("newsURL"));
-			logger.info("GetNewsQuery : " + rb.getString("newsQuery"));
+			logger.debug("GetNewsUrl : " + rb.getString("newsURL"));
+			logger.debug("GetNewsQuery : " + rb.getString("newsQuery"));
 			Document document = Jsoup.connect(rb.getString("newsURL")).get();
 			Elements elements = document.select(rb.getString("newsQuery"));
 			if (elements != null && !elements.isEmpty()) {
