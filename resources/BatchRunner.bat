@@ -20,7 +20,7 @@ SET CLASSPATH=%CLASSPATH%;%~dp0\classes\commons-logging-1.2.jar
 SET CLASSPATH=%CLASSPATH%;%~dp0\classes\jsoup-1.9.2.jar
 SET CLASSPATH=%CLASSPATH%;%~dp0\classes\log4j-1.2.17.jar
 SET CLASSPATH=%CLASSPATH%;%~dp0\classes\mybatis-3.4.1.jar
-SET CLASSPATH=%CLASSPATH%;%~dp0\classes\ojdbc6.jar
+SET CLASSPATH=%CLASSPATH%;%~dp0\classes\postgresql-9.4.1211.jre6.jar
 SET CLASSPATH=%CLASSPATH%;%~dp0\classes\RaviSiteBatch.jar
 
 SET RUNDATE=%date:~0,4%%date:~5,2%%date:~8,2%

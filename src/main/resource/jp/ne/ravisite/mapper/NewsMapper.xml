@@ -14,11 +14,11 @@
 	</resultMap>
 
 	<select id="selectAll" resultMap="NewsResultMap">
-		SELECT * FROM NEWS_TABLE
+		SELECT * FROM webapp1.NEWS_TABLE
 	</select>
 
 	<insert id="insert" parameterType="jp.ne.ravisite.dto.NewsDto">
-		INSERT INTO NEWS_TABLE (
+		INSERT INTO webapp1.NEWS_TABLE (
 			TITLE,
 			URL,
 			NEW_FLAG,
@@ -32,7 +32,7 @@
 	</insert>
 
 	<delete id="deleteAll">
-		DELETE FROM NEWS_TABLE
+		DELETE FROM webapp1.NEWS_TABLE
 	</delete>
 
 </mapper>
