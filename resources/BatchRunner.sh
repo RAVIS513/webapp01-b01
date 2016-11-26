@@ -17,8 +17,8 @@
 
 echo `date` バッチ開始
 
-CLASSPATH="/home/tomcat/batch/histsite/properties"
-for jar in `ls /home/tomcat/batch/histsite/classes/*.jar`; do
+CLASSPATH="/public/webapp1/batch/batch0001/properties"
+for jar in `ls /public/webapp1/batch/batch0001/classes/*.jar`; do
  CLASSPATH="${CLASSPATH}:${jar}"
 done
 
