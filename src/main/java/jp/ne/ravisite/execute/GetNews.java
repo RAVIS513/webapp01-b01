@@ -19,6 +19,7 @@ import jp.ne.ravisite.dto.GetNewsDto;
 import jp.ne.ravisite.dto.NewsDto;
 import jp.ne.ravisite.exception.BatchException;
 import jp.ne.ravisite.utils.DbSessionUtil;
+import jp.ne.ravisite.utils.StringUtil;
 
 public class GetNews extends BatchAbstract{
 
@@ -76,7 +77,8 @@ public class GetNews extends BatchAbstract{
 				logger.info("Get News Numbers : " + elements.size());
 				for (Element e : elements) {
 					GetNewsDto dto = new GetNewsDto();
-					dto.setTitle(e.text());
+//					dto.setTitle(e.text());
+					dto.setTitle(StringUtil.replaceCharacter(e.text()));
 					dto.setUrl(e.attr(rb.getString("newsQueryUrl")));
 					list.add(dto);
 				}
