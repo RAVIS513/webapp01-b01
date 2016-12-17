@@ -78,7 +78,8 @@ public class GetNews extends BatchAbstract{
 				for (Element e : elements) {
 					GetNewsDto dto = new GetNewsDto();
 //					dto.setTitle(e.text());
-					dto.setTitle(StringUtil.replaceCharacter(e.text()));
+//					dto.setTitle(StringUtil.replaceCharacter(e.text()));
+					dto.setTitle(StringUtil.replaceCharacter(e.select(rb.getString("newsQueryTitle")).text()));
 					dto.setUrl(e.attr(rb.getString("newsQueryUrl")));
 					list.add(dto);
 				}
